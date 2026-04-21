@@ -1,0 +1,315 @@
+========================================================================
+ALUMINUM / CONSTRUCTION HYPOTHESIS VALIDATION REPORT v2
+Aluminum : AA
+Stocks   : ['XHB', 'ITB', 'PKB']
+Period   : 2015-01-02 → 2026-04-20
+========================================================================
+
+CORRECTED ECONOMIC MODEL
+────────────────────────
+Aluminum is an INPUT COST. Rising prices squeeze builder margins.
+Expected direction: NEGATIVE co-movement (not positive).
+
+H1 — Inverse beta : spread  = −Al − β×stock
+H2 — Ratio        : spread  =  Al / stock
+H3 — Positive beta: spread  =  Al − β×stock  (null benchmark)
+
+
+════════════════════════════════════════════════════════════════════════
+  PAIR: aluminum / XHB
+════════════════════════════════════════════════════════════════════════
+
+  ── H1 — inverse beta (cost-margin squeeze) ──
+
+  [1] Normality → Spearman selected
+      Skew=-0.165  Excess kurt=4.315
+  Correlation r                             0.3958  (expect negative)  [✗ wrong direction]
+  p / 95% CI                                0.0  [0.3632, 0.4295]  [significant]
+  Strength                                  moderate        
+
+  [2] Granger causality (Al leads stock?)
+  Best lag / p-value                        lag=4  p=0.001738  [Al LEADS ✓]
+
+  [3] Stationarity
+  Aluminum ADF p (levels)                   0.3573            [I(1) ✓]
+  XHB ADF p (levels)                        0.8946            [I(1) ✓]
+
+  [4] Cointegration (on inverse spread)
+  Engle-Granger p                           0.3908            [NOT ✗]
+  Johansen trace / 5% crit                  10.4608 / 15.4943  [NOT ✗]
+
+  [5] Spread/ratio quality
+  Half-life (days)                          457.5             [too slow/fast]
+  Hurst exponent                            1.0378            [random walk ✗]
+  Spread ADF p                              0.0006            [stationary ✓]
+  Verdict                                   NOT TRADEABLE   
+
+  [6] Regime stability
+  % windows broken                          91.7%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 1/5  →  NOT SUPPORTED
+
+  ── H2 — cost-margin ratio (Al / stock) ──
+
+  [1] Normality → Spearman selected
+      Skew=—  Excess kurt=—
+  Correlation r                             0.3958  (expect negative)  [✗ wrong direction]
+  p / 95% CI                                0.0  [0.3632, 0.4295]  [significant]
+  Strength                                  moderate        
+
+  [3] Ratio stationarity (want I(0))
+  Ratio ADF p                               0.2366            [non-stationary ✗]
+
+  [4] Spread/ratio quality
+  Half-life (days)                          244.7             [too slow/fast]
+  Hurst exponent                            1.0152            [random walk ✗]
+  Spread ADF p                              0.2366            [non-stationary ✗]
+  Verdict                                   NOT TRADEABLE   
+
+  [5] Regime stability
+  % windows broken                          87.1%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 0/5  →  NOT SUPPORTED
+
+  ── H3 — positive beta (demand-driven, null benchmark) ──
+
+  [1] Normality → Spearman selected
+      Skew=—  Excess kurt=—
+  Correlation r                             0.3958  (expect positive)  [✓ direction]
+  p / 95% CI                                0.0  [0.3632, 0.4295]  [significant]
+  Strength                                  moderate        
+
+  [2] Granger causality (Al leads stock?)
+  Best lag / p-value                        lag=4  p=0.001738  [Al LEADS ✓]
+
+  [4] Cointegration (on spread)
+  Engle-Granger p                           0.3908            [NOT ✗]
+  Johansen trace / 5% crit                  10.4608 / 15.4943  [NOT ✗]
+
+  [5] Spread/ratio quality
+  Half-life (days)                          457.5             [too slow/fast]
+  Hurst exponent                            1.0378            [random walk ✗]
+  Spread ADF p                              0.0006            [stationary ✓]
+  Verdict                                   NOT TRADEABLE   
+
+  [6] Regime stability
+  % windows broken                          91.7%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 2/5  →  WEAK SUPPORT
+
+════════════════════════════════════════════════════════════════════════
+  RECOMMENDATION FOR XHB
+  Best score 2/5 — insufficient evidence.
+  Do not trade this pair with real capital yet.
+  Try: longer history, different date range,
+  or different construction proxy (PKB vs XHB vs ITB).
+════════════════════════════════════════════════════════════════════════
+
+
+════════════════════════════════════════════════════════════════════════
+  PAIR: aluminum / ITB
+════════════════════════════════════════════════════════════════════════
+
+  ── H1 — inverse beta (cost-margin squeeze) ──
+
+  [1] Normality → Spearman selected
+      Skew=-0.165  Excess kurt=4.315
+  Correlation r                             0.3351  (expect negative)  [✗ wrong direction]
+  p / 95% CI                                0.0  [0.3021, 0.3713]  [significant]
+  Strength                                  moderate        
+
+  [2] Granger causality (Al leads stock?)
+  Best lag / p-value                        lag=4  p=0.006916  [Al LEADS ✓]
+
+  [3] Stationarity
+  Aluminum ADF p (levels)                   0.3573            [I(1) ✓]
+  ITB ADF p (levels)                        0.8153            [I(1) ✓]
+
+  [4] Cointegration (on inverse spread)
+  Engle-Granger p                           0.4187            [NOT ✗]
+  Johansen trace / 5% crit                  10.3002 / 15.4943  [NOT ✗]
+
+  [5] Spread/ratio quality
+  Half-life (days)                          311.8             [too slow/fast]
+  Hurst exponent                            1.0331            [random walk ✗]
+  Spread ADF p                              0.0006            [stationary ✓]
+  Verdict                                   NOT TRADEABLE   
+
+  [6] Regime stability
+  % windows broken                          88.0%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 1/5  →  NOT SUPPORTED
+
+  ── H2 — cost-margin ratio (Al / stock) ──
+
+  [1] Normality → Spearman selected
+      Skew=—  Excess kurt=—
+  Correlation r                             0.3351  (expect negative)  [✗ wrong direction]
+  p / 95% CI                                0.0  [0.3021, 0.3713]  [significant]
+  Strength                                  moderate        
+
+  [3] Ratio stationarity (want I(0))
+  Ratio ADF p                               0.1577            [non-stationary ✗]
+
+  [4] Spread/ratio quality
+  Half-life (days)                          224.3             [too slow/fast]
+  Hurst exponent                            1.0135            [random walk ✗]
+  Spread ADF p                              0.1577            [non-stationary ✗]
+  Verdict                                   NOT TRADEABLE   
+
+  [5] Regime stability
+  % windows broken                          86.8%             [UNSTABLE ✗]
+  Max rolling ADF p                         0.9991          
+
+  ──────────────────────────────────────────────────
+  SCORE 0/5  →  NOT SUPPORTED
+
+  ── H3 — positive beta (demand-driven, null benchmark) ──
+
+  [1] Normality → Spearman selected
+      Skew=—  Excess kurt=—
+  Correlation r                             0.3351  (expect positive)  [✓ direction]
+  p / 95% CI                                0.0  [0.3021, 0.3713]  [significant]
+  Strength                                  moderate        
+
+  [2] Granger causality (Al leads stock?)
+  Best lag / p-value                        lag=4  p=0.006916  [Al LEADS ✓]
+
+  [4] Cointegration (on spread)
+  Engle-Granger p                           0.4187            [NOT ✗]
+  Johansen trace / 5% crit                  10.3002 / 15.4943  [NOT ✗]
+
+  [5] Spread/ratio quality
+  Half-life (days)                          311.8             [too slow/fast]
+  Hurst exponent                            1.0331            [random walk ✗]
+  Spread ADF p                              0.0006            [stationary ✓]
+  Verdict                                   NOT TRADEABLE   
+
+  [6] Regime stability
+  % windows broken                          88.0%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 2/5  →  WEAK SUPPORT
+
+════════════════════════════════════════════════════════════════════════
+  RECOMMENDATION FOR ITB
+  Best score 2/5 — insufficient evidence.
+  Do not trade this pair with real capital yet.
+  Try: longer history, different date range,
+  or different construction proxy (PKB vs XHB vs ITB).
+════════════════════════════════════════════════════════════════════════
+
+
+════════════════════════════════════════════════════════════════════════
+  PAIR: aluminum / PKB
+════════════════════════════════════════════════════════════════════════
+
+  ── H1 — inverse beta (cost-margin squeeze) ──
+
+  [1] Normality → Spearman selected
+      Skew=-0.165  Excess kurt=4.315
+  Correlation r                             0.4455  (expect negative)  [✗ wrong direction]
+  p / 95% CI                                0.0  [0.4138, 0.4791]  [significant]
+  Strength                                  moderate        
+
+  [2] Granger causality (Al leads stock?)
+  Best lag / p-value                        lag=4  p=0.000706  [Al LEADS ✓]
+
+  [3] Stationarity
+  Aluminum ADF p (levels)                   0.3573            [I(1) ✓]
+  PKB ADF p (levels)                        0.9965            [I(1) ✓]
+
+  [4] Cointegration (on inverse spread)
+  Engle-Granger p                           0.3133            [NOT ✗]
+  Johansen trace / 5% crit                  10.9798 / 15.4943  [NOT ✗]
+
+  [5] Spread/ratio quality
+  Half-life (days)                          544.3             [too slow/fast]
+  Hurst exponent                            1.0325            [random walk ✗]
+  Spread ADF p                              0.0               [stationary ✓]
+  Verdict                                   NOT TRADEABLE   
+
+  [6] Regime stability
+  % windows broken                          83.5%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 1/5  →  NOT SUPPORTED
+
+  ── H2 — cost-margin ratio (Al / stock) ──
+
+  [1] Normality → Spearman selected
+      Skew=—  Excess kurt=—
+  Correlation r                             0.4455  (expect negative)  [✗ wrong direction]
+  p / 95% CI                                0.0  [0.4138, 0.4791]  [significant]
+  Strength                                  moderate        
+
+  [3] Ratio stationarity (want I(0))
+  Ratio ADF p                               0.1352            [non-stationary ✗]
+
+  [4] Spread/ratio quality
+  Half-life (days)                          219.0             [too slow/fast]
+  Hurst exponent                            1.0186            [random walk ✗]
+  Spread ADF p                              0.1352            [non-stationary ✗]
+  Verdict                                   NOT TRADEABLE   
+
+  [5] Regime stability
+  % windows broken                          88.6%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 0/5  →  NOT SUPPORTED
+
+  ── H3 — positive beta (demand-driven, null benchmark) ──
+
+  [1] Normality → Spearman selected
+      Skew=—  Excess kurt=—
+  Correlation r                             0.4455  (expect positive)  [✓ direction]
+  p / 95% CI                                0.0  [0.4138, 0.4791]  [significant]
+  Strength                                  moderate        
+
+  [2] Granger causality (Al leads stock?)
+  Best lag / p-value                        lag=4  p=0.000706  [Al LEADS ✓]
+
+  [4] Cointegration (on spread)
+  Engle-Granger p                           0.3133            [NOT ✗]
+  Johansen trace / 5% crit                  10.9798 / 15.4943  [NOT ✗]
+
+  [5] Spread/ratio quality
+  Half-life (days)                          544.3             [too slow/fast]
+  Hurst exponent                            1.0325            [random walk ✗]
+  Spread ADF p                              0.0               [stationary ✓]
+  Verdict                                   NOT TRADEABLE   
+
+  [6] Regime stability
+  % windows broken                          83.5%             [UNSTABLE ✗]
+  Max rolling ADF p                         1.0             
+
+  ──────────────────────────────────────────────────
+  SCORE 2/5  →  WEAK SUPPORT
+
+════════════════════════════════════════════════════════════════════════
+  RECOMMENDATION FOR PKB
+  Best score 2/5 — insufficient evidence.
+  Do not trade this pair with real capital yet.
+  Try: longer history, different date range,
+  or different construction proxy (PKB vs XHB vs ITB).
+════════════════════════════════════════════════════════════════════════
+
+SUMMARY TABLE
+────────────────────────────────────────────────────────────────────────
+Pair            H1        H2        H3   Best  Verdict
+────────────────────────────────────────────────────────────────────────
+XHB            1/5       0/5       2/5     H3  WEAK SUPPORT
+ITB            1/5       0/5       2/5     H3  WEAK SUPPORT
+PKB            1/5       0/5       2/5     H3  WEAK SUPPORT
+────────────────────────────────────────────────────────────────────────

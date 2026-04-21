@@ -2,7 +2,7 @@
 
 **Project status**: Hypothesis rejected after testing (April 2026)
 
-** Methodology and implementation are original work. Reuse with attribution appreciated :)**
+Methodology and implementation are original work. Reuse with attribution appreciated :)
 
 ### Project Goal
 Test whether aluminum prices (as an input cost) have a exploitable statistical relationship with US construction/homebuilder stocks for a mean-reversion / pairs trading strategy.

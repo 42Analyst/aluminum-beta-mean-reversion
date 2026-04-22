@@ -65,7 +65,8 @@ The core issue is signal dilution: aluminum represents ~3–7% of residential co
 - Copper or lumber as higher-weight construction inputs
 
 ### Repository Contents
-- `aluminum hypothesis.py` — Standalone hypothesis testing engine (run this first)
+- `aluminum_idea_requirements.txt` — required python packages
+- `aluminum_hypothesis.py` — Standalone hypothesis testing engine (run this first)
 - `hypothesis_report.txt` — Full detailed output from latest run
 - `hypothesis_plots.png` — Visual diagnostics (scatter, spreads, rolling ADF)
 - `StatArb_Methodology.docx` — Complete technical documentation & pipeline design
